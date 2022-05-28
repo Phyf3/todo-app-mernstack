@@ -1,0 +1,16 @@
+GET http://localhost:3001/todos
+
+###
+POST http://localhost:3001/todo/create
+Content-Type: application/json
+
+{
+    "text" : "Swim"
+}
+
+###
+
+DELETE  http://localhost:3001/todo/delete/629166f08ee7b1f0bb899423
+
+###
+PUT  http://localhost:3001/todo/complete/6291697e71a1f44d59c9ddf2
