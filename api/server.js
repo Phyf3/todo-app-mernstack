@@ -1,7 +1,6 @@
 //IMPORTS
 const express = require('express');
 const mongoose = require('mongoose')
-const cors = require('cors')
 const Todo = require('./models/todo')
 
 // const serverless = require('serverless-http');
@@ -11,7 +10,6 @@ const app = express()
 
 //MIDDLEWARE
 app.use(express.json());
-app.use(cors());
 
 require('dotenv').config()
 const dbpassword = process.env.DB_PWD
