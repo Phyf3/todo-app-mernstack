@@ -1,5 +1,5 @@
-# todo-app-mernstack
+## mernstack todo app
 
-## api
-### api was deployed to heroku, app link : https://tewdhew.herokuapp.com/
-### https://tewdhew.herokuapp.com/todos
+### api
+#### api was deployed to heroku, app link : https://tewdhew.herokuapp.com/
+##### https://tewdhew.herokuapp.com/todos
