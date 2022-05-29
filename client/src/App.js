@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.css';
-const API_BASE = "http://localhost:3001"
+const API_BASE = "https://tewdhew.herokuapp.com"
 
 
 function App() {
