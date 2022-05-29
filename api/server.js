@@ -17,7 +17,8 @@ require('dotenv').config()
 const dbpassword = process.env.DB_PWD
 
 //DB CONNECTION
-mongoose.connect(`mongodb+srv://dbUser:${dbpassword}@cluster0.aywwh.mongodb.net/test`, {
+const MONOGODB_URI = `mongodb+srv://dbUser:${dbpassword}@cluster0.aywwh.mongodb.net/test`
+mongoose.connect(process.env.MONGODB_URI || MONOGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log("Connected to DB"))
