@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const Todo = require('./models/todo')
 
-const serverless = require('serverless-http');
+// const serverless = require('serverless-http');
 
 
 const app = express()
@@ -61,8 +61,8 @@ app.put('/todo/complete/:id', async (req, res) => {
 })
 
 //LISTEN
-app.listen(3001, () => {
-    console.log("Server starting on Port 3001")
+app.listen(process.env.PORT ||  3001, () => {
+    console.log("Server running")
 })
 
-module.exports.handler = serverless(app);
+// module.exports.handler = serverless(app);
