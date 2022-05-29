@@ -13,8 +13,11 @@ const app = express()
 app.use(express.json());
 app.use(cors());
 
+require('dotenv').config()
+const dbpassword = process.env.DB_PWD
+
 //DB CONNECTION
-mongoose.connect('mongodb://localhost:27017/mern-todo', {
+mongoose.connect(`mongodb+srv://dbUser:${dbpassword}@cluster0.aywwh.mongodb.net/test`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log("Connected to DB"))
@@ -55,7 +58,6 @@ app.put('/todo/complete/:id', async (req, res) => {
 
     res.json(todo)
 })
-
 
 //LISTEN
 app.listen(3001, () => {
